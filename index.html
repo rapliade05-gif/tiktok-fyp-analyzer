@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TikTok FYP Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>TikTok FYP Analyzer (MVP)</h1>
+      <p>Paste caption atau upload CSV history untuk analisis.</p>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>Analisis Caption</h2>
+        <textarea id="caption" placeholder="Tempel caption TikTok di sini..."></textarea>
+        <input id="sound" placeholder="(opsional) Nama sound / musik">
+        <button id="analyzeBtn">Analisis</button>
+        <div id="result"></div>
+      </section>
+
+      <section class="card">
+        <h2>Upload CSV History (opsional)</h2>
+        <p>Format CSV: date,caption,views,likes,comments,sound,hashtags</p>
+        <input type="file" id="csvfile" accept=".csv" />
+        <button id="uploadCsv">Upload & Analisis CSV</button>
+        <div id="csvResult"></div>
+      </section>
+    </main>
+
+    <footer>
+      <small>Timezone default: Asia/Jakarta. Data disimpan sementara untuk analisis.</small>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
